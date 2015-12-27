@@ -1,0 +1,23 @@
+Liste des NOEUDS // point, heuristique // Exemple: A, 44
+A, 30
+B, 26
+C, 20
+D, 21
+E, 25
+F, 10
+G, 12
+H, 8
+I, 0
+J, 5
+
+Liste d'adjacence //Point suivi de ses successeurs ainsi que le coût du chemin
+A: B, 5; C, 11; E, 7
+B: A, 5; D, 6
+C: A, 11; D, 6; E, 14; F, 9
+D: B, 6; C, 6; F, 5
+E: A, 7; C, 14; G, 15
+F: C, 9; D, 5; G, 5; H, 5
+G: E, 15; F, 5; H, 4; I, 11
+H: F, 5; G, 4; I, 11
+I: H, 11; J, 7
+J: G, 9; I, 7
