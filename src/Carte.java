@@ -35,18 +35,24 @@ public class Carte {
                     }
                     System.out.println(listePoints);
                 }
-                if(line.toLowerCase().contains("adjacence")){
+                if(line.toLowerCase().contains("successeurs")){
                     while ((line = in.readLine()) != null)
                     {
                         String tab[]= line.split(":");
                         String point = tab[0].trim();
-                        String suivant[] = tab[1].trim().split(";");
-                        HashMap<String,Integer> adjN = new HashMap<>();
-                        for(int i=0; i<suivant.length; i++){
-                            String suivInfo[] = suivant[i].split(",");
-                            adjN.put(suivInfo[0].trim(),Integer.parseInt(suivInfo[1].trim()));
+                        if(!tab[1].trim().equalsIgnoreCase("")){
+                            String suivant[] = tab[1].trim().split(";");
+                            HashMap<String,Integer> adjN = new HashMap<>();
+                            for(int i=0; i<suivant.length; i++){
+                                String suivInfo[] = suivant[i].split(",");
+                                adjN.put(suivInfo[0].trim(),Integer.parseInt(suivInfo[1].trim()));
+                            }
+                            listeAdjacence.put(point, adjN);
+                        }else{
+                            listeAdjacence.put(point, null);
                         }
-                        listeAdjacence.put(point, adjN);
+                        
+                        
                             
                     }
                     //System.out.println(contraintes);

@@ -1,0 +1,19 @@
+Liste des NOEUDS // point, heuristique // Exemple: A, 44
+S, 5
+A, 2
+B, 1
+C, 3
+D, 1
+E, 6
+G1, 0
+G2, 0
+
+Liste de SUCCESSEURS//Point suivi de ses successeurs ainsi que le coût du chemin
+S: A, 2; C, 3
+A: B, 1; E, 8
+B: C, 1; D, 1; G1, 4; S, 2
+C: D, 1; G2, 5
+D: G1, 5; G2, 1
+E: G1, 9; G2, 7
+G1: S, 4
+G2: 
