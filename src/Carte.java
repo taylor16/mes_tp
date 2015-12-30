@@ -574,12 +574,12 @@ public class Carte {
         return val;
     }
    
-    public static void main(String []args){
+    /*public static void main(String []args){
         //Carte toto =new Carte("carte/graphe.txt");
         Carte toto = new Carte();
         toto.initialisation2();
         //toto.algorithmeA(toto.listePoints,toto.listeAdjacence);
         toto.coutUniforme(toto.listePoints,toto.listeAdjacence);
-    }
+    }*/
 
 }   

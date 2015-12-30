@@ -1,5 +1,6 @@
 
 import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 
 public class Launch {
@@ -11,7 +12,7 @@ public class Launch {
         try {
            String cn = UIManager.getSystemLookAndFeelClassName();
            UIManager.setLookAndFeel(cn); // Use the native L&F
-       } catch (Exception cnf) {
+       } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException cnf) {
        }
         //</editor-fold>
 
