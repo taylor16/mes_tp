@@ -1,11 +1,31 @@
 
+import javax.swing.UIManager;
+
+
 public class Launch {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int nbarg=args.length;
+        try {
+           String cn = UIManager.getSystemLookAndFeelClassName();
+           UIManager.setLookAndFeel(cn); // Use the native L&F
+       } catch (Exception cnf) {
+       }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+               Fenetre f= new Fenetre();
+               f.setTitle("Plus cours chemin");
+               f.setLocationRelativeTo(null);
+               f.setResizable(false);
+               f.setVisible(true);
+            }
+        });
+        /*int nbarg=args.length;
         if(nbarg==4 && args[0].equals("-f")&& "-t".equals(args[2])){
             String filePath=args[1];
             String algo =args[3];
@@ -26,7 +46,7 @@ public class Launch {
                     break;
                 default:
                     System.out.println("L'algorithme choisi est incorrect");
-           }
+            }
         
         }else{
             System.out.println("\n Ce Programme permet de trouver le chemin le plus court qu'il faut emprunter sur une"
@@ -38,7 +58,7 @@ public class Launch {
             System.out.println("\t                  * CU: Cout uniforme");   
             System.out.println("\t                  * A: Algorithme A");
             System.out.println("\t                  * A*: Algorithme A etoile");   
-        }
+        }*/
     }
 
 }
